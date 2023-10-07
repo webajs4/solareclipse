@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.eclipse-container {
+    display: flex;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Remove any default spacing around the images */
+    margin: 0 auto; /* Center the images horizontally within their containers */
+}
+
+.sun, .moon, .earth {
+    flex: 1; /* Make each image container take up equal space */
+    text-align: center; /* Center the images within their containers */
+}
+
+.moon, .earth {
+    opacity: 0;
+}
+
+.eclipse-container:hover .moon, .eclipse-container:hover .earth {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
